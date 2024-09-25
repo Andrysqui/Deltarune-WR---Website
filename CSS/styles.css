@@ -1,0 +1,244 @@
+/* Fonts */
+@font-face {
+    font-family: "Determination";
+    src: url("/Fonts/DTM-Mono.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Determination";
+    src: url("/Fonts/DTM-Sans.ttf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Microsoft Sans Serif Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Microsoft Sans Serif Regular'), url('micross.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Microsoft Sans Serif';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Microsoft Sans Serif'), url('micross.woff') format('woff');
+}
+
+/* Page */
+#red-room {
+    background-image: url("/Images/image5.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+#red-room-video-container {
+    margin-left: 125px;
+    opacity: 0;
+}
+
+#fixed-text {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+    padding: 5px;
+    z-index: 1000;
+}
+
+#video-container {
+    margin-top: 60px;
+}
+
+#title {
+    font-size: 50px;
+}
+
+#advertisement {
+    width: 800px;
+    height: 250px;
+    padding: 15px;
+    margin-top: 60px;
+    background-color: #262626;
+    border: 2px groove #262626;
+    cursor: pointer;
+}
+
+#audio-player {
+    cursor: pointer;
+}
+
+#red-room-button {
+    font-family: "Determination";
+    font-weight: 300;
+    font-size: 50px;
+    padding: 10px;
+    margin-top: 150px;
+    width: 20vw;
+    height: 20vh;
+    background-color: #0d160d;
+    color: #ffffff;
+    border: 5px solid rgb(25, 79, 25);
+    cursor: pointer;
+}
+
+#hidden-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    font-size: 1px;
+    transition: max-height 0.5s ease, opacity 0.5s ease, font-size 0.5s ease;
+}
+
+#hidden-content.show {
+    max-height: 150px;
+    display: block;
+    opacity: 1;
+    font-size: 25px;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(74, 38, 38, 0.4);
+}
+
+#yes-popup-button {
+    color: #eeff00;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    padding: 10px;
+    background-color: #63ac42;
+    border: 2px solid #0e4c1f;
+    cursor: pointer;
+}
+
+#yes-popup-button:hover, 
+#yes-popup-button:focus {
+    color: #ff3c00;
+    background-color: #ac4242;
+    border: 2px solid #4c0e0e;
+}
+
+.popup-content {
+    background-color: #0d5a2d;
+    color: #609e2e;
+    margin: 15% auto;
+    padding: 20px;
+    border: 5px solid #0e4c1f;
+    width: 30%;
+    height: 20%;
+}
+
+.centered-content {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.underlined-text {
+    text-decoration: underline;
+}
+
+.blue-text {
+    color: rgb(0, 42, 255);
+}
+
+.red-text {
+    color: rgb(255, 0, 0);
+}
+
+.green-text {
+    color: rgb(9, 255, 0);
+}
+
+.gray-text {
+    color: rgb(30, 30, 30);
+}
+
+.textbox {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(63, 130, 36);
+    border-radius: 4px;
+    width: 550px;
+    height: 150px;
+    position: relative;
+    left: 30%;
+    z-index: 1000;
+}
+
+.centered-image {
+    display: block;
+    margin: auto;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.image-container img {
+    width: 400px;
+    height: 400px;
+    height: auto;
+    margin: 5px;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 247, 0);
+    font-family: "Determination";
+    font-size: 25px;
+}
+
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    text-align: center;
+}
+
+ol {
+    text-align: center;
+    padding: 0;
+}
+
+ol li {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    list-style-position: inside;
+}
+
+@keyframes breathing {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.breathing {
+    animation: breathing 2s infinite;
+}
